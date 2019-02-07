@@ -1,0 +1,8 @@
+@import '../base/mixins';
+
+@include font-face (Proxima-Nova, ProximaNova-Bold, 700, normal);
+@include font-face (Proxima-Nova, ProximaNova-Medium, 500, normal);
+@include font-face (Proxima-Nova, ProximaNova-Regular, 400, normal);
+@include font-face (Proxima-Nova, ProximaNova-RegularIt, 400, italic);
+@include font-face (Proxima-Nova, ProximaNova-Light, 300, normal);
+@include font-face (Jane-Aust, JaneAust, normal, normal);

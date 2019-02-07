@@ -1,0 +1,182 @@
+#footer {
+	position: relative;
+	background-color: #000;
+	color: $white;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		@include media ('<desktop') {
+			flex-wrap: wrap;
+		}
+	}
+	.col {
+		position: relative;
+		z-index: 1;
+		&:first-child {
+			flex: 0 0 auto;
+			margin-right: 30px;
+			width: 470px;
+			@include media ('<desktop') {
+				width: 386px;
+				margin: 0 auto;
+			}
+			@include media ('<phone') {
+				width: auto;
+			}
+		}
+		&:last-child {
+			max-width: 369px;
+			padding-left: 62px;
+			@include media ('<desktop') {
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			a {
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+		.img-block {
+			position: absolute;
+			left: 0;
+			top: 11px;
+			@include media ('<desktop') {
+				position: relative;
+				order: -1;
+				top: 0;
+				margin-bottom: 19px;
+			}
+			@include media ('<phone') {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+	.btn {
+		display: block;
+		padding: 8px 10px 6px 10px;
+		text-align: center;
+		font-size: 14px;
+		@include media ('<desktop') {
+			font-size: 12px;
+			padding: 7px 8px 4px 8px;
+		}
+	}
+	address {
+		font-style: normal;
+		margin-bottom: 10px;
+		@include media ('<desktop') {
+			width: 100%;
+			text-align: center;
+		}
+		@include media ('<phone') {
+			max-width: 290px;
+		}
+	}
+}
+.footer-holder {
+	position: relative;
+	max-width: 1040px;
+	margin: 0 auto;
+	padding: 31px 0 39px 0px;
+	@include media ('<desktop') {
+		padding: 31px 0 15px 0px;
+	}
+}
+.separator {
+	display: none;
+	margin: 0 4px;
+	&:after {
+		content: '|';
+	}
+	@include media ('<desktop') {
+		display: inline;
+	}
+	@include media ('<phone') {
+		display: none;
+	}
+}
+.logo-footer {
+	flex: 0 0 auto;
+	width: 389px;
+	margin: 10px auto 73px auto;
+	@include media ('<desktop') {
+		width: 389px;
+		margin: 17px auto 56px auto;
+	}
+	@include media ('<phone') {
+		width: 230px;
+		margin: 17px auto 30px auto;
+	}
+	img {
+		width: 100%;
+	}
+}
+.btn-nav {
+	@extend %listreset;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	@include media ('<desktop') {
+		display: none;
+	}
+	li {
+		width: 30%;
+		margin-bottom: 15px;
+		@include media ('<desktop') {
+			width: 31%;
+		}
+	}
+}
+.tel {
+	@extend %listreset;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin: 0 -12px 10px 0;
+	@include media ('<desktop') {
+		width: 100%;
+		justify-content: center;
+		margin: 0 -20px 10px 0;
+	}
+	li {
+		margin-right: 12px;
+		position: relative;
+		&:first-child {
+			&:after {
+				position: absolute;
+				content: '|';
+				top: 0;
+				right: -8px;
+				@include media ('<desktop') {
+					right: -13px;
+				}
+			}
+		}
+		@include media ('<desktop') {
+			margin-right: 21px;
+		}
+	}
+	p {
+		margin: 0;
+	}
+}
+.copyright {
+	@extend %listreset;
+	@include media ('<desktop') {
+		display: none;
+	}
+	a {
+		font-weight: bold;
+	}
+}
